@@ -30,7 +30,10 @@ def fetch_data():
 # 🚨 Insecure use of environment variables
 def load_env_variable():
     secret = os.getenv("DATABASE_PASSWORD")  # Sensitive data exposure
-    print(f"Loaded secret: {secret}")  # 🚨 Potential exposure of secrets
+    if secret:
+        print("Loaded secret successfully.")  # Avoid exposing the actual secret
+    else:
+        print("No secret found in environment variables.")
 
 if __name__ == "__main__":
     print(get_user_data())
