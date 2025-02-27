@@ -5,6 +5,8 @@ import sys
 
 # Hardcoded Secret (Should be detected by Secret Scanning)
 API_KEY = "sk_live_1234567890abcdef"
+my_user = "tes123"
+password = "MyPassword"
 
 # Insecure SQL Query (More explicit taint tracking for CodeQL)
 def get_user_data():
