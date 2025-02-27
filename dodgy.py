@@ -30,3 +30,4 @@ if __name__ == "__main__":
 
     url = input("Enter URL to fetch: ")
     print(fetch_data(url))
+    print("hello world")
